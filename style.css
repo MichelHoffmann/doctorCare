@@ -1,0 +1,57 @@
+/*=============== RULES ===============*/
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*=============== VARIABLES ===============*/
+:root {
+  font-size: 62.5%; /* 1 rem = 10 px*/
+
+  --primary-color:   hsl(170, 100%, 26%);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+}
+
+
+/*=============== MAIN STYLE ===============*/
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 3.4rem;
+  color: var(--headline);
+  line-height: 130%;
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--paragraph);
+  line-height: 150%;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.8rem;
+}
+
+/*
+PAREI NOS SELETORES UNIVERSAIS
+
+MINUTO: 1:55:34
+
+*/
