@@ -1,6 +1,6 @@
 /*=============== RULES ===============*/
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
 /*=============== UNIVERSAL RULES ===============*/
 * {
@@ -20,12 +20,18 @@
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
 
-  --nav-height:  7.2rem;
+  --nav-height: 7.2rem;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 /*=============== MAIN STYLE ===============*/
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -37,14 +43,18 @@ body {
   padding-inline: 2.4rem;
 }
 
+ul {
+  list-style: none;
+}
+
 /*=============== HEADER STYLE ===============*/
 header {
   margin-top: calc(4.1rem + var(--nav-height));
 }
 
 header::before {
-  content: "";
-  width: 100vw;
+  content: '';
+  width: 100%;
   height: calc(108rem + var(--nav-height));
   background-color: var(--brand-light);
   display: block;
@@ -165,16 +175,44 @@ nav.scroll {
 
 nav.scroll svg:nth-child(1) path {
   fill: white;
-  stroke: white;
 }
 
 nav.scroll svg:nth-child(2) path {
   stroke: white;
 }
 
-/*
-PAREI NOS SELETORES UNIVERSAIS
+/*=============== MENU-EXPANDED ===============*/
+body.menu-expanded{
+  overflow: hidden;
+}
 
-MINUTO: 2:12:34
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
 
-*/
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded{
+  overflow: hidden;
+}
+
+body.menu-expanded .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
+}
+
+body.menu-expanded nav {
+  position: relative;
+}
