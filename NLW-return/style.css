@@ -89,16 +89,21 @@ header button {
   background-color: var(--primary-color);
   border: none;
   border-radius: 4rem;
+
   height: 6.2rem;
   width: 26.3rem;
+
   color: white;
+
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
+
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
+
   margin: auto;
   margin-bottom: 6rem;
   cursor: pointer;
@@ -147,14 +152,14 @@ header img {
   color: var(--primary-color);
   font-size: 1.6rem;
   line-height: 150%;
-  font-weight: 400;
 }
 
 /*=============== NAV STYLE ===============*/
 nav {
-  display: flex;
-
   height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   position: fixed;
   top: 0;
@@ -162,57 +167,9 @@ nav {
   transform: translateX(-50%);
 }
 
-nav .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 nav.scroll {
   background-color: var(--primary-color);
-  width: 100vw;
 }
 
 nav.scroll svg:nth-child(1) path {
-  fill: white;
-}
-
-nav.scroll svg:nth-child(2) path {
-  stroke: white;
-}
-
-/*=============== MENU-EXPANDED ===============*/
-body.menu-expanded{
-  overflow: hidden;
-}
-
-.menu,
-.close-menu,
-body.menu-expanded .open-menu {
-  opacity: 0;
-  visibility: hidden;
-}
-
-body.menu-expanded .menu,
-body.menu-expanded .close-menu {
-  opacity: 1;
-  visibility: visible;
-}
-
-body.menu-expanded{
-  overflow: hidden;
-}
-
-body.menu-expanded .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--primary-color);
-
-  width: 100vw;
-  height: 100vh;
-}
-
-body.menu-expanded nav {
-  position: relative;
 }
