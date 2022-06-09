@@ -1,6 +1,6 @@
 let nav = document.getElementById('navigation')
 let menu = document.getElementsByClassName('open-menu')
-let corpo = document.getElementsByTagName('body')
+let corpo = document.getElementById('body')
 
 function onScroll() {
   if (scrollY > 0) {

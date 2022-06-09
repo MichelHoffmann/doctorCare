@@ -34,6 +34,8 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
   text-align: center;
+
+  overflow: overlay;
 }
 
 /*Alinhamento padrão que será utilisado em mais de uma tag*/
@@ -181,13 +183,23 @@ nav.scroll svg:nth-child(1) path {
   fill: var(--brand-light);
 }
 
-nav.scroll svg:nth-child(2) path {
+nav.scroll button path {
   stroke: var(--brand-light);
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /*=============== MENU-EXPANDED ===============*/
 body.menu-expanded {
   overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+  display: none;
 }
 
 .menu,
@@ -236,6 +248,7 @@ body.menu-expanded nav {
   color: white;
   text-decoration: none;
 }
+
 .menu .button {
   background-color: white;
   border-radius: 4rem;
@@ -275,7 +288,3 @@ body.menu-expanded .logo path {
 body.menu-expanded button path {
   stroke: white;
 }
-
-
-
-minuto 23:33
