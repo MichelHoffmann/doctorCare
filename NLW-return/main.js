@@ -1,23 +1,29 @@
+window.addEventListener('scroll', onScroll)
+
 let nav = document.getElementById('navigation')
 let menu = document.getElementsByClassName('open-menu')
 let corpo = document.getElementById('body')
-let scrollitem = document.getElementById('BackToTop')
+let scrollitem = document.getElementById('BackToTopButton')
 
+onScroll()
 function onScroll() {
-  function navScroll() {
-    if (scrollY > 0) {
-      nav.classList.add('scroll')
-    } else {
-      nav.classList.remove('scroll')
-    }
-  }
+  ShowNavOnScroll()
+  ShowBackToTopButtonOnScroll()
+}
 
-  function BackToTop() {
-    if (scrollY > 550) {
-      scrollitem.classList.add('BackToTopOn')
-    } else {
-      scrollitem.classList.remove('BackToTopOn')
-    }
+function ShowNavOnScroll() {
+  if (scrollY > 0) {
+    nav.classList.add('scroll')
+  } else {
+    nav.classList.remove('scroll')
+  }
+}
+
+function ShowBackToTopButtonOnScroll() {
+  if (scrollY > 500) {
+    scrollitem.classList.add('BackToTopOn')
+  } else {
+    scrollitem.classList.remove('BackToTopOn')
   }
 }
 
@@ -41,4 +47,10 @@ ScrollReveal({
 #services .card,
 #about,
 #about header,
-#aboyt .content,`)
+#about .content,
+#about .content img,
+#contact,
+#contact header,
+#contact .content,
+#contact .content img,
+footer`)
