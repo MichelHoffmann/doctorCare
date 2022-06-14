@@ -9,6 +9,7 @@ onScroll()
 function onScroll() {
   ShowNavOnScroll()
   ShowBackToTopButtonOnScroll()
+  activeMenuLine()
 }
 
 function ShowNavOnScroll() {
@@ -33,6 +34,16 @@ function openMenu() {
 
 function closeMenu() {
   corpo.classList.remove('menu-expanded')
+}
+
+function activeMenuLine() {
+  if (scrollY < 500) {
+    //window.alert('entrou no if')
+    //scrollitem.classList.add('BackToTopOn')
+  } else {
+    //window.alert('entrou no else')
+    //scrollitem.classList.remove('BackToTopOn')
+  }
 }
 
 ScrollReveal({
