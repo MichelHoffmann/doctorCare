@@ -37,13 +37,20 @@ function closeMenu() {
 }
 
 function activeMenuLine() {
-  if (scrollY < 500) {
-    //window.alert('entrou no if')
-    //scrollitem.classList.add('BackToTopOn')
-  } else {
-    //window.alert('entrou no else')
-    //scrollitem.classList.remove('BackToTopOn')
-  }
+  const midLine = scrollY + innerHeight / 2
+
+  //Estou na Section home
+  const sectionHome =
+    services.offsetTop > midLine && midLine > home.offsetTop
+
+  //Estou na Section Services
+  const sectionServices =
+    about.offsetTop > midLine && midLine > services.offsetTop
+
+  //Estou na Section About
+  const sectionAbout =
+    contact.offsetTop > midLine && midLine > about.offsetTop
+
 }
 
 ScrollReveal({
